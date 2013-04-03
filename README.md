@@ -1,4 +1,4 @@
-jtme
+Jtme
 ====
 
 Java Text Mode Emulator - Emulador de Modo Texto para Java
@@ -11,7 +11,7 @@ Há 3 formas de se usar:
 3 - instanciando a classe Jtme.
 
 Exemplo usando a forma 1:
-=========================
+-------------------------
 
 public class Teste {
 
@@ -23,7 +23,7 @@ public class Teste {
 
 
 Exemplo usando a forma 2:
-=========================
+-------------------------
 
 public class Teste extends Jtme {
 
