@@ -1,0 +1,127 @@
+import java.awt.Color;
+
+public class testando_jtme {
+
+  public static void main(String[] args) {
+		Jtme.clrScr();
+		Jtme.print(">");
+		Jtme.typeText();
+		Jtme.delay(2000);
+
+		if (Jtme.isKeyPressed()) {
+			t1();
+		}
+		Jtme.gotoXY(15, 15);
+		Jtme.print("Pressione qualquer tecla para continuar");
+		//while (!Jtme.isKeyPressed());
+		Jtme.clrScr();
+		Jtme.print("O");
+		Jtme.print("ij");
+		Jtme.gotoXY(10, 10);
+		Jtme.print("Hello");
+		Jtme.println("eu kpjko", 8, "jjpQpP", 9 + 8);
+		Jtme.println("Eu sei");
+		Jtme.println();
+		for (int i = 0; i < 999; i++)
+			System.out.println("" + i);
+		// Jtm.clrScr();
+		System.out.println("Começa!!!!");
+		long a = System.currentTimeMillis();
+		for (int j = 1; j <= 25; j++) {
+			for (int i = 1; i <= 80; i++) {
+				Jtme.gotoXY(i, j);
+				Jtme.print("a");
+				Jtme.delay(1);
+			}
+		}
+
+		a = System.currentTimeMillis() - a;
+		System.out.println("Termina!!!! delay(1): tempo=" + a + " qtd de caracteres impressos = " + (25*80));
+		Jtme.delay(2000);
+		Jtme.println("jijijiji");
+		Jtme.delay(1000);
+		Jtme.gotoXY(50, 20);
+		Jtme.println("ijisjdfoisjdfosdijnonjOIJNUNSnh fduhnINAFUnfdnhsifNHFINDuidhfnsiunhNINFHIudnhf");
+		Jtme.println(" O       ");
+		Jtme.delay(2000);
+		System.out.println("Começa iiiiii 600 caracteres delay(10)!!!!");
+		a = System.currentTimeMillis();
+		Jtme.gotoXY(1, 23);
+		Jtme.setBackGroundColor(Color.BLUE);
+		Jtme.setTextColor(Color.YELLOW);
+		for (int j = 1; j <= 600; j++) {
+			Jtme.print("i");
+			Jtme.delay(10);
+		}
+		a = System.currentTimeMillis() - a;
+		System.out.println("Termina iiiii!!!! tempo=" + a);
+		Jtme.resetColors();
+		Jtme.gotoXY(1, 1);
+		for (int x = 1; x <= 39; x++) {
+			Jtme.println(x);
+			Jtme.delay(100);
+		}
+		Jtme.print(40);
+		Jtme.delay(3000);
+		Jtme.clrScr();
+		for (int x = 1; x <= 39; x++) {
+			Jtme.println(x);
+			Jtme.delay(500);
+			Jtme.clrScr();
+			Jtme.gotoXY(40, x + 1);
+		}
+		Jtme.clrScr();
+		String s;
+		do {
+			Jtme.print(">");
+			s = Jtme.typeText();
+			Jtme.println(s);
+		} while (!s.contains("quit")); 
+
+		Jtme.clrScr();
+		boolean cursor=true;
+		for(int i=0;i<10;i++){
+			Jtme.setCursorMode(cursor);
+		Jtme.gotoXY(39, 12);
+		Jtme.print("FIM");
+		Jtme.delay(100);
+		cursor=!cursor;
+		}
+	}
+
+	public static void t1() {
+		Jtme.clrScr();
+		int ini = 1;
+		int fim = 80;
+		int som = 1;
+		int coluna = ini;
+		for (int linha = 1; linha <= 25; linha++) {
+			do {
+				Jtme.gotoXY(coluna, linha);
+				Jtme.print("OOOOiiiii");
+				coluna = coluna + som;
+			} while (coluna != fim);
+			som = som * -1;
+			fim = ini;
+			ini = coluna;
+		}
+		Jtme.delay(1000);
+		coluna = 1;
+		ini = 1;
+		fim = 80;
+		som = 1;
+		for (int linha = 1; linha <= 25; linha++) {
+			do {
+				Jtme.gotoXY(coluna, linha);
+				Jtme.print("x");// xxxiiiii");
+				System.out.println("linha=" + linha + ", coluna=" + coluna);
+				Jtme.delay(20);
+				coluna = coluna + som;
+			} while (coluna != fim + som);
+			som = som * -1;
+			fim = ini;
+			ini = coluna + som;
+		}
+		
+	}
+}
