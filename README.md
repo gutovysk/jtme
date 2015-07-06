@@ -1,6 +1,8 @@
 Jtme
 ====
 
+[![Join the chat at https://gitter.im/gutovysk/jtme](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gutovysk/jtme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Java Text Mode Emulator - Emulador de Modo Texto para Java
 
 Emula o modo texto em aplicações Java. Criado especialmente para atender o projeto APFJogos (www.apfjogos.com)
